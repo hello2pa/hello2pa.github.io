@@ -1,0 +1,365 @@
+{
+  "title": "JSON Maker",
+  "created": "2025-02-25",
+  "modified": "2025-06-17",
+  "status": "In Progress",
+  "tags": [
+    "HTML",
+    "javascript",
+    "vue",
+    "json",
+    "github"
+  ],
+  "body": [
+    {
+      "type": "h1",
+      "class": [],
+      "style": [
+        "font-family: sans-serif"
+      ],
+      "item": "What is the \n<span style=\"\n-webkit-text-fill-color: white; \n-webkit-text-stroke-width: 2px;\n-webkit-text-stroke-color: black;\n\">\n<i>JSON Maker</span>?</i>"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [],
+      "item": "The JSON Maker (aka JMkr when I don't feel like typing so much) is a tool that I developed to ease the documentation process of my projects for my personal blog. This web app that you are currently reading serves as the visual editor for a custom string of JSON data that can be stored on any ol' server that your heart desires. It might not be universally useful, but I quite like it myself."
+    },
+    {
+      "type": "img",
+      "class": [],
+      "style": [
+        "border-radius: 25px;"
+      ],
+      "item": "01.gif"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [],
+      "item": "Seen above is the JSON output for this sample page that you are currently reading. Each section of this page is a separate object within the \"body\" array. This website visually represents the data to make it easier to manipulate, but at the end of the day, you will be getting raw data to implement however you like. Later on I will go over some changes you can make to help visually represent the data here how you would on your own site."
+    },
+    {
+      "type": "h2",
+      "class": [],
+      "style": [],
+      "item": "How to <u><i>use it</u></i>. <span style=\"color: gray; font-size: x-small;\">(JMkr, that is.)</span>"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [],
+      "item": "Since this is a tool to help you build your website, it's mostly up to you to determine how you will use it. With that being said, there are two main steps to using JMkr:\n<ol>\n<li>Creating your post\n<li>Implementing it on your website\n</ol>\nI'm going to start by explaining how I implemented this with my website, and hopefully you can click around and get a feel for how to create your own post in the process."
+    },
+    {
+      "type": "h2",
+      "class": [],
+      "style": [],
+      "item": "<u>2. Implementation:</u>"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 2"
+      ],
+      "item": "<h3 style=\"text-align: center; margin: 5px\n\">Upload JSON data to the database of your dreams</h3>\nI will be using firebase for this because it is free and I am broke. If you are also considering using firebase, then you can download my python tool that uploads all of your JSON files into a single collection that is easily accessed from your web application."
+    },
+    {
+      "type": "img",
+      "class": [],
+      "style": [
+        "grid-column: span 4",
+        "width: 80%"
+      ],
+      "item": "02.gif"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "padding: 0"
+      ],
+      "item": "<hr/>"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 2;"
+      ],
+      "item": "<h3 style=\"text-align: center; margin: 5px\">Load the data on your website</h3>\nThis part will involve parsing your data and choosing which files you want to load. I will be doing this in Vue 3 Composition API, and I don't know how it will differ for vanilla JS applications"
+    },
+    {
+      "type": "img",
+      "class": [],
+      "style": [
+        "grid-column: span 4",
+        "border-radius: 25px;",
+        "width: 80%;",
+        "object-fit: cover"
+      ],
+      "item": "03.gif"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "padding: 0"
+      ],
+      "item": "<hr/>"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 2",
+        "grid-row: span 2"
+      ],
+      "item": "<h3 style=\"text-align: center; margin: 5px\">Display your beautiful post</h3>\nThere are ways to do this in plain javascript with <br/><div style=\"width: 100%; text-align: center\"><span style=\"color: orange;\">document</span>.<span style=\"color: blue\">createElement</span>(el.type);\n</div> but in Vue 3, it can be done in a single line of code with a component element and v-for. Per the JSON structure, the information in \"item\" must be read as HTML (v-html in my example)."
+    },
+    {
+      "type": "img",
+      "class": [],
+      "style": [
+        "grid-column: span 4",
+        "border-radius: 25px;",
+        "align-self: end;",
+        "width: 80%",
+        "object-position: 0 0",
+        "height: 90%",
+        "object-fit:  cover"
+      ],
+      "item": "04.gif"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 4",
+        "font-size: small",
+        "color: #8f8f8f",
+        "width: 70%",
+        "margin-top: -15px",
+        "align-self: start;"
+      ],
+      "item": "The image above shows the code used to display the post that you are currently looking at, and the editing features like <span style=\"color: orange\">postSelect(<span style=\"color:blue\">index</span>)</span> and the selection outline are still in there. You probably won't want those features on a blog site."
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "padding-top: 0"
+      ],
+      "item": "<hr/>"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 2",
+        "text-align: center"
+      ],
+      "item": "<h3>Caveats <br/>to this <br/>implementation</h3>"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 4"
+      ],
+      "item": "<li style=\"font-size: large\"><b>Image loading</b></li>\n<div style=\"text-indent: 30px; width: 100%; float: right; font-size: small; margin-top: 10px; margin-bottom: 10px\">Images that you upload using the file selector will just get stored as their file name. This works for me because I will be storing my images in a folder with the project name, so I only need the image name when loading the project page. This might not work for others, but you always have the option to make a div and call an img tag in there.</div>\n<li style=\"font-size: large\"><b>Child elements</b></li>\n<div style=\"text-indent: 30px; width: 100%; float: right; font-size: small; margin-top: 10px; margin-bottom: 10px\">Items that you create in JMkr are sterile, and they can't easily have children. Obviously you can write the code into the textarea to create multiple elements within a single div, but the lack of autofill and the inability to undo mistakes makes that a rough option. However, it is still an option, so I won't be fixing it.</div>\n<li style=\"font-size: large\"><b>Lack of Javascript</b></li>\n<div style=\"text-indent: 30px; width: 100%; float: right; font-size: small; margin-top: 10px; margin-bottom: 10px\">I love me some interactive design if you couldn't tell, and this style of website seems like it could benefit from some sweet sweet scripting. I did my best to add the possibility of scripting within these items, but I could not make it happen. I will eventually be adding Vue component support in the future, so that might help make me more content with this project.</div>"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [],
+      "item": "If these are things that you think you can get past, then let's get into the details on how to get creative with this dysfunctional mess of a tool!"
+    },
+    {
+      "type": "h2",
+      "class": [],
+      "style": [],
+      "item": "<u>1. Post Creation</u>"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [],
+      "item": "I hope you've already spent some time clicking around, but post creation is actually pretty simple. If you want to get an idea how it works, start by clicking <a href=\"javascript:;\">right here</a>!\n\n<!-- This text input acts as HTML, anything you type in here will be interpreted by my jank backend and you'll see it on this row!-->"
+    },
+    {
+      "type": "img",
+      "class": [],
+      "style": [
+        "grid-column: span 2;",
+        "width: 70%;"
+      ],
+      "item": "07.gif"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 4"
+      ],
+      "item": "Each post is  full of items that are editable through this tab (it gets finicky on mobile, but this website wasn't designed to function on mobile anyways)<br/><br/>\n<b>Positioning items:</b><br/>\nThe top fraction refers to the location of the currently selected item in relation to the total number of items. The buttons below it allow you to move the currently selected item up or down.<br/><br/>\n<b>Item types:</b><br/>\nI'll go over this later, but whichever one is selected is pretty obvious, and if you just click one of the others it will become selected. The default is Paragraph for some reason.<br/><br/>\n<b>Styling:</b><br/>\nYou see the class text box. You see the style text box. All you gotta do is type in them there boxes and hit enter to add either classes or css styling to the current item. The list of items will be visible beneath the text box, and alls ya gotta dos is click on them to remove them.<br/><br/>\n<b>Iteming:</b><br/>\nThis one is pretty self explanatory. It reads as html, so look around and see some of my fun tricks, come up with your own too.<br/><br/>\n<b>Delete:</b><br/>\nThis button only deletes the selected item, not the whole post."
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 1;",
+        "width: 50%;"
+      ],
+      "item": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\">\n        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z\" />\n        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z\" />\n      </svg>"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 5;"
+      ],
+      "item": "Pressing this cog at the bottom of the screen opens up the post settings menu. This will be where you adjust the post title, dates, status, and tags, as well as being able to upload an existing JSON post, and your very own custom css. I'll go over the Image Database option in a little bit, be patient. The <b>\"CLEAR\"</b> button at the bottom will reset the post back to nothing, but there is a confirmation screen that comes up so don't worry, you probably won't accidentally erase all of your hard work. "
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 1;",
+        "width: 50%;"
+      ],
+      "item": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\">\n        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z\" />\n      </svg>"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 5;"
+      ],
+      "item": "This button is the one that adds a new item."
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 1;",
+        "width: 50%;"
+      ],
+      "item": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"size-6\">\n        <path fill-rule=\"evenodd\" d=\"M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z\" clip-rule=\"evenodd\" />\n      </svg>"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 5;"
+      ],
+      "item": "Clicking this button will download your JSON data. The file will automatically be named to fit the post name."
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "padding: 0"
+      ],
+      "item": "<hr/>"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "padding-bottom: 0"
+      ],
+      "item": "<b>Default CSS:</b>"
+    },
+    {
+      "type": "img",
+      "class": [],
+      "style": [
+        "grid-column: span 3",
+        "grid-row: span 3",
+        "justify-self: end",
+        "width: 90%"
+      ],
+      "item": "05.gif"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "grid-column: span 3",
+        "width: 80%",
+        "justify-self: start"
+      ],
+      "item": "<h3>Container:</h3>This is the class that is given to the main grid that all of the information is within. As you can see it is a 6 column grid, but that can be changed with your own css file"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 3",
+        "width: 80%",
+        "justify-self: start"
+      ],
+      "item": "<h3>Item:</h3>This is the class where each clickable item within the post is stored. They are defaulted to take up the whole row, and the padding gives the shape for the outline."
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 3",
+        "width: 80%",
+        "justify-self: start"
+      ],
+      "item": "These are some of the default tags that will be discussed next:"
+    },
+    {
+      "type": "div",
+      "class": [],
+      "style": [
+        "width: 100%;",
+        "overflow-x: auto"
+      ],
+      "item": "<style>\ntable, th, td {\n  border: 1px solid black;\n}\nth, td {\n  padding: 20px;\n}\n</style>\n<table>\n<tr>\n<th>Header</th>\n<th>subHeader</th>\n<th>Paragraph</th>\n<th>Image</th>\n<th>Div</th>\n</tr>\n<tr>\n<td>Applies a &lt;h1&gt; tag to the item</td>\n<td>Applies a &lt;h2&gt; tag to the item</td>\n<td>Applies a &lt;p&gt; tag to the item</td>\n<td>Select an image from your computer (only stores the file name)</td>\n<td>Basic &lt;div&gt; tag, but can hold any tag you'd like</td>\n</tr>\n</table>\n\n"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [],
+      "item": "For the most part these tags are self explanatory, with header, subheader, paragraph, and div being exactly what they say. The image tag is made for easy use of images in my specific use case, so it might not be intuitive to use. Within the post settings (the cog at the bottom) there is an input called \"Image Database\" where you can type in the root URL for your image database."
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [
+        "grid-column: span 3",
+        "width: 90%",
+        "justify-self: start"
+      ],
+      "item": "This website that you are currently browsing was made initially to be my image database for my blog site, so my database URL is <br/><a href=\"https://github.com/hello2pa/hello2pa.github.io/tree/main/assets\" target=\"_blank\">http://hello2pa.github.io/assets</a><br/> You can see here all of the images that I have featured on this website.<br/><br/>From there, the image tag looks for a folder that has the same name as the post (see JSON Maker at the top of this post, and then on the folder in the assets section of my github repo)<br/><br/>The image tag allows you to upload an image, which is then stored as the image name, which it will look for within this specified database. This works best for me, but if it does not work for you, then you gotta use a div with an image tag in it - aka, the old fashioned way. "
+    },
+    {
+      "type": "img",
+      "class": [],
+      "style": [
+        "grid-column: span 3",
+        "width: 110%"
+      ],
+      "item": "06.gif"
+    },
+    {
+      "type": "h2",
+      "class": [],
+      "style": [
+        "padding: 0"
+      ],
+      "item": "In summation"
+    },
+    {
+      "type": "p",
+      "class": [],
+      "style": [],
+      "item": "That's pretty much it. I just made this tool to provide some visual benefit to making my own blog posts. I'm aware that markup might have been better or whatever, but I <i>made</i> this. That's pretty cool imo. If you use this tool for your own website, or your think this tutorial is lacking anything, watch my Youtube videos and leave me a comment. They're pretty unrelated, but it might help the algorithm if I get some interaction over there."
+    }
+  ]
+}

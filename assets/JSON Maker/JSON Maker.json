@@ -1,11 +1,7 @@
 {
   "title": "JSON Maker",
   "created": "2025-02-25",
-<<<<<<< HEAD
-  "modified": "2025-06-17",
-=======
   "modified": "2025-07-17",
->>>>>>> 19484ae (V1)
   "status": "In Progress",
   "tags": [
     "HTML",
@@ -67,11 +63,7 @@
       "style": [
         "grid-column: span 2"
       ],
-<<<<<<< HEAD
-      "item": "<h3 style=\"text-align: center; margin: 5px\n\">Upload JSON data to the database of your dreams</h3>\nI will be using firebase for this because it is free and I am broke. If you are also considering using firebase, then you can download my python tool that uploads all of your JSON files into a single collection that is easily accessed from your web application."
-=======
       "item": "<h3 style=\"text-align: center; margin: 5px\n\">Upload JSON data to the database of your dreams</h3>\nI will be using firebase for this because it is free and I am broke. If you are also considering using firebase, then you can download my python tool (<a href=\"\">click here</a>) that uploads all of your JSON files into a single collection that is easily accessed from your web application."
->>>>>>> 19484ae (V1)
     },
     {
       "type": "img",
@@ -96,11 +88,7 @@
       "style": [
         "grid-column: span 2;"
       ],
-<<<<<<< HEAD
-      "item": "<h3 style=\"text-align: center; margin: 5px\">Load the data on your website</h3>\nThis part will involve parsing your data and choosing which files you want to load. I will be doing this in Vue 3 Composition API, and I don't know how it will differ for vanilla JS applications"
-=======
       "item": "<h3 style=\"text-align: center; margin: 5px\">Load the data on your website</h3>\nThis part will involve parsing your data and choosing which files you want to load. I will be doing this in Vue 3 Composition API, but I had ChatGPT write a test html site that uses this very JSON file if you want to try and reverse engineer it (<a href=\"\">click here</a>)"
->>>>>>> 19484ae (V1)
     },
     {
       "type": "img",
@@ -221,8 +209,6 @@
       "type": "p",
       "class": [],
       "style": [
-<<<<<<< HEAD
-=======
         "padding: 0;"
       ],
       "item": "<hr/>"
@@ -231,7 +217,6 @@
       "type": "p",
       "class": [],
       "style": [
->>>>>>> 19484ae (V1)
         "grid-column: span 1;",
         "width: 50%;"
       ],
@@ -291,16 +276,10 @@
       "type": "p",
       "class": [],
       "style": [
-<<<<<<< HEAD
-        "padding-bottom: 0"
-      ],
-      "item": "<b>Default CSS:</b>"
-=======
         "padding-bottom: 5px",
         "width: 95%;"
       ],
       "item": "<b><u>Default CSS:</u></b>"
->>>>>>> 19484ae (V1)
     },
     {
       "type": "img",
@@ -309,12 +288,8 @@
         "grid-column: span 3",
         "grid-row: span 3",
         "justify-self: end",
-<<<<<<< HEAD
-        "width: 90%"
-=======
         "width: 90%",
         "border-radius: 25px;"
->>>>>>> 19484ae (V1)
       ],
       "item": "05.gif"
     },
@@ -361,11 +336,7 @@
       "type": "p",
       "class": [],
       "style": [],
-<<<<<<< HEAD
-      "item": "For the most part these tags are self explanatory, with header, subheader, paragraph, and div being exactly what they say. The image tag is made for easy use of images in my specific use case, so it might not be intuitive to use. Within the post settings (the cog at the bottom) there is an input called \"Image Database\" where you can type in the root URL for your image database."
-=======
       "item": "For the most part these tags are self explanatory, with header, subheader, paragraph, and div being exactly what they say. The image tag is made for easy use of images in my specific use case, so it might not be intuitive to use."
->>>>>>> 19484ae (V1)
     },
     {
       "type": "p",
@@ -375,11 +346,7 @@
         "width: 90%",
         "justify-self: start"
       ],
-<<<<<<< HEAD
-      "item": "This website that you are currently browsing was made initially to be my image database for my blog site, so my database URL is <br/><a href=\"https://github.com/hello2pa/hello2pa.github.io/tree/main/assets\" target=\"_blank\">http://hello2pa.github.io/assets</a><br/> You can see here all of the images that I have featured on this website.<br/><br/>From there, the image tag looks for a folder that has the same name as the post (see JSON Maker at the top of this post, and then on the folder in the assets section of my github repo)<br/><br/>The image tag allows you to upload an image, which is then stored as the image name, which it will look for within this specified database. This works best for me, but if it does not work for you, then you gotta use a div with an image tag in it - aka, the old fashioned way. "
-=======
       "item": "<b>Image Database</b><br/>This website that you are currently browsing was made initially to be my image database for my blog site, so my database URL is <br/><a href=\"https://github.com/hello2pa/hello2pa.github.io/tree/main/assets\" target=\"_blank\">http://hello2pa.github.io/assets</a><br/> You can see here all of the images and files that I have featured on this website.<br/><br/>From there, the image tag looks for a folder that has the same name as the post (see JSON Maker at the top of this post, and then on the folder in the assets section of my github repo)<br/><br/>The image tag allows you to upload an image, which is then stored as the image name, which it will look for within this specified database. This works best for me, but if it does not work for you, then you gotta use a div with an image tag in it - aka, the old fashioned way. "
->>>>>>> 19484ae (V1)
     },
     {
       "type": "img",
@@ -391,8 +358,6 @@
       "item": "06.gif"
     },
     {
-<<<<<<< HEAD
-=======
       "type": "p",
       "class": [],
       "style": [
@@ -413,7 +378,6 @@
       "item": "<b>Mobile implementation</b></br>\nI didn't go through the trouble of setting up the css to handle media queries or none of that jazz, I'm leaving that up to you and how you want your website to look. That being said, this website looks like garbage on mobile right now. Everything can be changed though, since this is just a tool to help you get the data in a list."
     },
     {
->>>>>>> 19484ae (V1)
       "type": "h2",
       "class": [],
       "style": [

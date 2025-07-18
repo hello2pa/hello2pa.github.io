@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Viewer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #7f5af0;
+      --background: #16161a;
+      --foreground: #fffffe;
+      --muted: #94a1b2;
+      --card-bg: #1f1f28;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1f1f28 0%, #232339 100%);
+      color: var(--foreground);
+      padding: 40px;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    #app {
+      max-width: 800px;
+      margin: auto;
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease-in;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: var(--accent);
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 0.4em 0;
+    }
+
+    .outline-item {
+      margin-left: 20px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    a {
+      color: #2cb67d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--accent);
+      margin: 20px 0;
+    }
+
+    [data-type='h2'] {
+      margin-top: 1.5em;
+      font-size: 1.6em;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+
+  <script>
+    const app = document.getElementById('app');
+
+    fetch("https://hello2pa.github.io/assets/JSON%20Maker/JSON%20Maker.json")
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      })
+      .then(data => {
+        app.innerHTML = '';
+
+        const meta = `
+          <h1>${data.title}</h1>
+          <p><strong>Status:</strong> ${data.status} | 
+             <strong>Created:</strong> ${data.created} | 
+             <strong>Modified:</strong> ${data.modified}</p>
+          <p><strong>Tags:</strong> ${data.tags.join(', ')}</p>
+          <hr>
+        `;
+        app.innerHTML += meta;
+
+        data.body.forEach(el => {
+          const element = document.createElement(el.type);
+          if (el.class && el.class.length) element.className = el.class.join(' ');
+          if (el.style && el.style.length) element.style = el.style.join('; ');
+          element.setAttribute("data-type", el.type); // for CSS targeting
+          element.innerHTML = el.item;
+          app.appendChild(element);
+        });
+      })
+      .catch(error => {
+        app.innerHTML = `<p style="color: red;">Failed to load JSON: ${error.message}</p>`;
+      });
+  </script>
+</body>
+</html>

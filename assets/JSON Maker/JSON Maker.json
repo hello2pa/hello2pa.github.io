@@ -63,7 +63,7 @@
       "style": [
         "grid-column: span 2"
       ],
-      "item": "<h3 style=\"text-align: center; margin: 5px\n\">Upload JSON data to the database of your dreams</h3>\nI will be using firebase for this because it is free and I am broke. If you are also considering using firebase, then you can download my python tool (<a href=\"\">click here</a>) that uploads all of your JSON files into a single collection that is easily accessed from your web application."
+      "item": "<h3 style=\"text-align: center; margin: 5px\n\">Upload JSON data to the database of your dreams</h3>\nI will be using firebase for this because it is free and I am broke. If you are also considering using firebase, then you can download my python tool (<a href="https://hello2pa.github.io/assets/JSON%20Maker/Firebaser.py" download>click here</a>) that uploads all of your JSON files into a single collection that is easily accessed from your web application."
     },
     {
       "type": "img",
@@ -88,7 +88,7 @@
       "style": [
         "grid-column: span 2;"
       ],
-      "item": "<h3 style=\"text-align: center; margin: 5px\">Load the data on your website</h3>\nThis part will involve parsing your data and choosing which files you want to load. I will be doing this in Vue 3 Composition API, but I had ChatGPT write a test html site that uses this very JSON file if you want to try and reverse engineer it (<a href=\"\">click here</a>)"
+      "item": "<h3 style=\"text-align: center; margin: 5px\">Load the data on your website</h3>\nThis part will involve parsing your data and choosing which files you want to load. I will be doing this in Vue 3 Composition API, but I had ChatGPT write a test html site that uses this very JSON file if you want to try and reverse engineer it (<a href="https://hello2pa.github.io/assets/JSON%20Maker/Example.html" download>click here</a>)"
     },
     {
       "type": "img",

@@ -1,13 +1,16 @@
 {
   "title": "JSON Maker",
+  "desc": "Make some JSON's",
   "created": "2025-02-25",
-  "modified": "2025-07-17",
+  "modified": "2025-07-28",
   "status": "In Progress",
   "tags": [
-    "HTML",
+    "json",
+    "maker",
+    "json maker",
+    "html",
     "javascript",
     "vue",
-    "json",
     "github"
   ],
   "body": [
@@ -228,7 +231,7 @@
       "style": [
         "grid-column: span 5;"
       ],
-      "item": "Pressing this cog at the bottom of the screen opens up the post settings menu. This will be where you adjust the post title, dates, status, and tags, as well as being able to upload an existing JSON post, and your very own custom css. I'll go over the Image Database option in a little bit, be patient. The <b>\"CLEAR\"</b> button at the bottom will reset the post back to nothing, but there is a confirmation screen that comes up so don't worry, you probably won't accidentally erase all of your hard work. "
+      "item": "Pressing this cog at the bottom of the screen opens up the post settings menu. This will be where you adjust the post title, description, dates, status, and tags, as well as being able to upload an existing JSON post, and your very own custom css. I'll go over the Image Database option in a little bit, be patient. The <b>\"CLEAR\"</b> button at the bottom will reset the post back to nothing, but there is a confirmation screen that comes up so don't worry, you probably won't accidentally erase all of your hard work. "
     },
     {
       "type": "p",
@@ -276,10 +279,9 @@
       "type": "p",
       "class": [],
       "style": [
-        "padding-bottom: 5px",
-        "width: 95%;"
+        "padding-bottom: 0"
       ],
-      "item": "<b><u>Default CSS:</u></b>"
+      "item": "<b>Default CSS:</b>"
     },
     {
       "type": "img",
